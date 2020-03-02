@@ -1,0 +1,11 @@
+CoreBusiness - classe antiga de regra de negócio do sistema
+CoreCustom - classe de customização de sistemas
+CoreEntities - classe antiga de entidades de sistema
+CoreExtension - classe antiga de framework
+CoreFramework - versao framework 1.0
+CoreKonnector - classe de utilidade do sistema usuário/Equipes
+CoreMDK - classe privada de utilidade do sistema
+CoreSDK - classes de utilidades
+CoreStudio - versao framework 2.0
+Crypto - (des)criptografar senhas
+sistematica.application - 

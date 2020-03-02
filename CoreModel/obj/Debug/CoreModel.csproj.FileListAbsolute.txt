@@ -1,0 +1,9 @@
+C:\Desenv\Core\CoreModel\bin\Debug\CoreModel.dll
+C:\Desenv\Core\CoreModel\bin\Debug\CoreModel.pdb
+C:\Desenv\Core\CoreModel\bin\Debug\CoreSDK.dll
+C:\Desenv\Core\CoreModel\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Desenv\Core\CoreModel\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+C:\Desenv\Core\CoreModel\bin\Debug\MySql.Data.dll
+C:\Desenv\Core\CoreModel\obj\Debug\CoreModel.csprojResolveAssemblyReference.cache
+C:\Desenv\Core\CoreModel\obj\Debug\CoreModel.dll
+C:\Desenv\Core\CoreModel\obj\Debug\CoreModel.pdb

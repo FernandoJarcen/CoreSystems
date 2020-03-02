@@ -1,0 +1,9 @@
+C:\Desenv\Core\CoreKonnector\CoreKonnector\bin\Debug\CoreKonnector.dll
+C:\Desenv\Core\CoreKonnector\CoreKonnector\bin\Debug\CoreKonnector.pdb
+C:\Desenv\Core\CoreKonnector\CoreKonnector\bin\Debug\CoreMDK.dll
+C:\Desenv\Core\CoreKonnector\CoreKonnector\bin\Debug\CoreSDK.dll
+C:\Desenv\Core\CoreKonnector\CoreKonnector\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+C:\Desenv\Core\CoreKonnector\CoreKonnector\bin\Debug\MySql.Data.dll
+C:\Desenv\Core\CoreKonnector\CoreKonnector\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Desenv\Core\CoreKonnector\CoreKonnector\obj\Debug\CoreKonnector.dll
+C:\Desenv\Core\CoreKonnector\CoreKonnector\obj\Debug\CoreKonnector.pdb

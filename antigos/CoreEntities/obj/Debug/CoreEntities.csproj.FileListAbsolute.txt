@@ -1,0 +1,12 @@
+C:\Desenv\Core\CoreEntities\bin\Debug\CoreEntities.dll
+C:\Desenv\Core\CoreEntities\bin\Debug\CoreEntities.pdb
+C:\Desenv\Core\CoreEntities\bin\Debug\CoreSDK.dll
+C:\Desenv\Core\CoreEntities\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Desenv\Core\CoreEntities\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+C:\Desenv\Core\CoreEntities\bin\Debug\MySql.Data.dll
+C:\Desenv\Core\CoreEntities\obj\Debug\CoreEntities.dll
+C:\Desenv\Core\CoreEntities\obj\Debug\CoreEntities.pdb
+C:\Desenv\Core\antigos\CoreEntities\bin\Debug\CoreEntities.dll
+C:\Desenv\Core\antigos\CoreEntities\bin\Debug\CoreEntities.pdb
+C:\Desenv\Core\antigos\CoreEntities\obj\Debug\CoreEntities.dll
+C:\Desenv\Core\antigos\CoreEntities\obj\Debug\CoreEntities.pdb

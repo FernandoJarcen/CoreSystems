@@ -1,0 +1,8 @@
+C:\Desenv\Core\CoreCustom\CoreCustom\bin\Debug\CoreCustom.dll
+C:\Desenv\Core\CoreCustom\CoreCustom\bin\Debug\CoreCustom.pdb
+C:\Desenv\Core\CoreCustom\CoreCustom\bin\Debug\CoreSDK.dll
+C:\Desenv\Core\CoreCustom\CoreCustom\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+C:\Desenv\Core\CoreCustom\CoreCustom\bin\Debug\MySql.Data.dll
+C:\Desenv\Core\CoreCustom\CoreCustom\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Desenv\Core\CoreCustom\CoreCustom\obj\Debug\CoreCustom.dll
+C:\Desenv\Core\CoreCustom\CoreCustom\obj\Debug\CoreCustom.pdb

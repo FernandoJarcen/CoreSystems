@@ -1,0 +1,824 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{65AB25A9-FCB1-4CB9-803D-43E0ED44AEF2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CoreFramework</RootNamespace>
+    <AssemblyName>CoreFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CoreMDK">
+      <HintPath>..\..\..\Lib\CoreMDK.dll</HintPath>
+    </Reference>
+    <Reference Include="CoreSDK">
+      <HintPath>..\..\..\Lib\CoreSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>..\..\..\Lib\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="FirebirdSql.Data.FirebirdClient">
+      <HintPath>..\..\..\Lib\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess">
+      <HintPath>..\..\..\Lib\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseObjects\BaseControls.cs" />
+    <Compile Include="Componentes\Componente\ConnectionComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\Componente\ConnectionComponent.Designer.cs">
+      <DependentUpon>ConnectionComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\Componente\MenuComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\Componente\MenuComponent.Designer.cs">
+      <DependentUpon>MenuComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\Componente\QueryComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\Componente\QueryComponent.Designer.cs">
+      <DependentUpon>QueryComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\Componente\RepositoryComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\Componente\RepositoryComponent.Designer.cs">
+      <DependentUpon>RepositoryComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\Componente\SessionComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\Componente\SessionComponent.Designer.cs">
+      <DependentUpon>SessionComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\Componente\ValidationComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\Componente\ValidationComponent.Designer.cs">
+      <DependentUpon>ValidationComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\ActionExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\ActionExtends.Designer.cs">
+      <DependentUpon>ActionExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\ActionList\CalculateActionList.cs" />
+    <Compile Include="Controles\Controle\ActionList\CaptionActionList.cs" />
+    <Compile Include="Controles\Controle\ActionList\CaptionGridActionList.cs" />
+    <Compile Include="Controles\Controle\ActionList\CheckedActionList.cs" />
+    <Compile Include="Controles\Controle\ActionList\ComboActionList.cs" />
+    <Compile Include="Controles\Controle\ActionList\FieldActionList.cs" />
+    <Compile Include="Controles\Controle\ActionList\LabelActionList.cs" />
+    <Compile Include="Controles\Controle\ActionList\LookUpActionList.cs" />
+    <Compile Include="Controles\Controle\ActionList\MaskEditActionList.cs" />
+    <Compile Include="Controles\Controle\ActionList\PanelActionList.cs" />
+    <Compile Include="Controles\Controle\ActionList\PanelCaptionActionList.cs" />
+    <Compile Include="Controles\Controle\ActionList\SpeedButtonActionList.cs" />
+    <Compile Include="Controles\Controle\ButtonExtends.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\ButtonImageExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\ButtonImageExtends.Designer.cs">
+      <DependentUpon>ButtonImageExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\CalculateExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\CalculateExtends.Designer.cs">
+      <DependentUpon>CalculateExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\CaptionExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\CaptionExtends.Designer.cs">
+      <DependentUpon>CaptionExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\CardExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\CardExtends.Designer.cs">
+      <DependentUpon>CardExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\CheckedExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\CheckedExtends.Designer.cs">
+      <DependentUpon>CheckedExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\CheckGridExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\CheckGridExtends.Designer.cs">
+      <DependentUpon>CheckGridExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\Componente\Collection\AutorizacaoCollection.cs" />
+    <Compile Include="Controles\Controle\Collection\ConditionExpressionCollection.cs" />
+    <Compile Include="Controles\Controle\Collection\HideItemCollection.cs" />
+    <Compile Include="Controles\Controle\Collection\JoinExpressionCollection.cs" />
+    <Compile Include="Controles\Controle\Collection\ListSearchCollection.cs" />
+    <Compile Include="Controles\Controle\Collection\MultiViewPageCollection.cs" />
+    <Compile Include="Controles\Controle\Collection\RepositoryItemCollection.cs" />
+    <Compile Include="Controles\Controle\Collection\SpeedItemCollection.cs" />
+    <Compile Include="Controles\Controle\Collection\TabListControlCollection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\Collection\TabListPageCollection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\ComboBoxExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\ComboBoxExtends.Designer.cs">
+      <DependentUpon>ComboBoxExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\ComboListExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\CommandButtonExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\CommandButtonExtends.Designer.cs">
+      <DependentUpon>CommandButtonExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\Base\CommonGridBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\Base\CommonGridBase.Designer.cs">
+      <DependentUpon>CommonGridBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\DateTimeExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\DateTimeExtends.Designer.cs">
+      <DependentUpon>DateTimeExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\ButtonMaxExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\ButtonMaxExtends.Designer.cs">
+      <DependentUpon>ButtonMaxExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\Designer\CalculateDesigner.cs" />
+    <Compile Include="Controles\Controle\Designer\CaptionDesigner.cs" />
+    <Compile Include="Controles\Controle\Designer\CaptionGridDesigner.cs" />
+    <Compile Include="Controles\Controle\Designer\CheckedDesigner.cs" />
+    <Compile Include="Controles\Controle\Designer\ComboDesigner.cs" />
+    <Compile Include="Controles\Controle\Designer\DefaultTabListPageRenderer.cs" />
+    <Compile Include="Controles\Controle\Designer\FieldDesigner.cs" />
+    <Compile Include="Controles\Controle\Designer\LabelDesigner.cs" />
+    <Compile Include="Controles\Controle\Designer\LookUpDesigner.cs" />
+    <Compile Include="Controles\Controle\Designer\MaskEditDesigner.cs" />
+    <Compile Include="Controles\Controle\Designer\MultiViewDesigner.cs" />
+    <Compile Include="Controles\Controle\Designer\MultiViewPageDesigner.cs" />
+    <Compile Include="Controles\Controle\Designer\PanelCaptionDesigner.cs" />
+    <Compile Include="Controles\Controle\Designer\PanelDesigner.cs" />
+    <Compile Include="Controles\Controle\Designer\SpeedButtonDesigner.cs" />
+    <Compile Include="Controles\Controle\Designer\TabListDesigner.cs" />
+    <Compile Include="Controles\Controle\Designer\TabListPageDesigner.cs" />
+    <Compile Include="Controles\Controle\Designer\TabListPageRenderer.cs" />
+    <Compile Include="Controles\Controle\Designer\TabListPageState.cs" />
+    <Compile Include="Controles\Controle\DirectoryExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\DirectoryExtends.Designer.cs">
+      <DependentUpon>DirectoryExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\Componente\Editors\AutorizacaoCollectionEditor.cs" />
+    <Compile Include="Controles\Controle\Editors\HideItemCollectionEditor.cs" />
+    <Compile Include="Controles\Controle\Editors\ListSearchCollectionEditor.cs" />
+    <Compile Include="Controles\Controle\Editors\RepositoryItemCollectionEditor.cs" />
+    <Compile Include="Controles\Controle\FieldExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\FieldExtends.Designer.cs">
+      <DependentUpon>FieldExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\HideExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\HideExtends.Designer.cs">
+      <DependentUpon>HideExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\Itens\HideItem.cs" />
+    <Compile Include="Controles\Controle\Itens\InfoItem.cs" />
+    <Compile Include="Controles\Controle\Itens\ProcessoItem.cs" />
+    <Compile Include="Controles\Controle\ImageGridExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\ImageGridExtends.Designer.cs">
+      <DependentUpon>ImageGridExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\Base\ChooseControlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\Interfaces\IGridControl.cs" />
+    <Compile Include="Componentes\Componente\Itens\AutorizacaoItem.cs" />
+    <Compile Include="Controles\Controle\Itens\ContextItem.cs" />
+    <Compile Include="Controles\Controle\Itens\ListSearchItem.cs" />
+    <Compile Include="Controles\Controle\Itens\ReferenceItem.cs" />
+    <Compile Include="Controles\Controle\Itens\RepositoryItem.cs" />
+    <Compile Include="Controles\Controle\KeyExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\KeyExtends.Designer.cs">
+      <DependentUpon>KeyExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\LabelExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\LabelExtends.Designer.cs">
+      <DependentUpon>LabelExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\LabelViewExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\LabelViewExtends.Designer.cs">
+      <DependentUpon>LabelViewExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\LookUpDetailExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\LookUpExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\LookUpExtends.Designer.cs">
+      <DependentUpon>LookUpExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\PanelDisplayExtends.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\DisplayItemExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\DisplayItemExtends.Designer.cs">
+      <DependentUpon>DisplayItemExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\DivisionBarExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\DivisionBarExtends.Designer.cs">
+      <DependentUpon>DivisionBarExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\Editors\DisplayCollectionEditor.cs" />
+    <Compile Include="Controles\Controle\Editors\EntityCollectionEditor.cs" />
+    <Compile Include="Controles\Controle\Editors\ImageCollectionEditor.cs" />
+    <Compile Include="Controles\Controle\Editors\ItemCollectionEditor.cs" />
+    <Compile Include="Controles\Controle\Editors\ListItemCollectionEditor.cs" />
+    <Compile Include="Controles\Controle\Editors\MenuCollectionEditor.cs" />
+    <Compile Include="Controles\Controle\Editors\CaptionCollectionEditor.cs" />
+    <Compile Include="Controles\Controle\Editors\SpeedItemCollectionEditor.cs" />
+    <Compile Include="Controles\Controle\Editors\TaskItemCollectionEditor.cs" />
+    <Compile Include="Controles\Controle\PanelEntityExtends.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\EntityItemExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\EntityItemExtends.Designer.cs">
+      <DependentUpon>EntityItemExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\FileExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\FileExtends.Designer.cs">
+      <DependentUpon>FileExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\FilterDataExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\FilterDataExtends.Designer.cs">
+      <DependentUpon>FilterDataExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\FilterExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\FilterExtends.Designer.cs">
+      <DependentUpon>FilterExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\GradientPanelExtends.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\GridViewExtends.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\GroupExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\GroupExtends.Designer.cs">
+      <DependentUpon>GroupExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\ImageButtonExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\ImageButtonExtends.Designer.cs">
+      <DependentUpon>ImageButtonExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\InfoExtends.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\InfoGridExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\InfoGridExtends.Designer.cs">
+      <DependentUpon>InfoGridExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\ItemExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\ItemExtends.Designer.cs">
+      <DependentUpon>ItemExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\ItemStatusExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\ItemStatusExtends.Designer.cs">
+      <DependentUpon>ItemStatusExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\Itens\MultiViewPageItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\Itens\SpeedItem.cs" />
+    <Compile Include="Controles\Controle\Itens\TabListPageItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\Base\DesignControlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\Interfaces\ITabListPageRenderer.cs" />
+    <Compile Include="Controles\Controle\PanelListExtends.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\ListItemExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\ListItemExtends.Designer.cs">
+      <DependentUpon>ListItemExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\ListSearchExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\ListSearchExtends.Designer.cs">
+      <DependentUpon>ListSearchExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\MaskEditExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\MaskEditExtends.Designer.cs">
+      <DependentUpon>MaskEditExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\MemoExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\MemoExtends.Designer.cs">
+      <DependentUpon>MemoExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\PanelMenuExtends.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\MenuItemExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\MenuItemExtends.Designer.cs">
+      <DependentUpon>MenuItemExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\MessageExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\MessageExtends.Designer.cs">
+      <DependentUpon>MessageExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\MessageButtonExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\MessageButtonExtends.Designer.cs">
+      <DependentUpon>MessageButtonExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\MessageCheckExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\MessageCheckExtends.Designer.cs">
+      <DependentUpon>MessageCheckExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\MultiViewExtends.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\PanelExtends.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\PanelImageExtends.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\PanelItemExtends.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\ProcessExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\ProcessExtends.Designer.cs">
+      <DependentUpon>ProcessExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\QuickExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\QuickExtends.Designer.cs">
+      <DependentUpon>QuickExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\RadioButtonExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\RadioButtonExtends.Designer.cs">
+      <DependentUpon>RadioButtonExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\RegisterExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\RegisterExtends.Designer.cs">
+      <DependentUpon>RegisterExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\ResultExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\ResultExtends.Designer.cs">
+      <DependentUpon>ResultExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\SelectGridExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\SelectGridExtends.Designer.cs">
+      <DependentUpon>SelectGridExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\SimpleGridExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\SimpleGridExtends.Designer.cs">
+      <DependentUpon>SimpleGridExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\SpeedButtonExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\SpeedButtonExtends.Designer.cs">
+      <DependentUpon>SpeedButtonExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\StatusButtonExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\StatusButtonExtends.Designer.cs">
+      <DependentUpon>StatusButtonExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\StatusPanelExtends.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\CaptionGridExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\CaptionGridExtends.Designer.cs">
+      <DependentUpon>CaptionGridExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\PanelCaptionExtends.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\CaptionItemExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\CaptionItemExtends.Designer.cs">
+      <DependentUpon>CaptionItemExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\TabGridExtends.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\TabListExtends.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\PanelTaskExtends.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\TabViewExtends.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\TaskItemExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\TaskItemExtends.Designer.cs">
+      <DependentUpon>TaskItemExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\TextBoxExtends.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\TitleBlockExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\TitleBlockExtends.Designer.cs">
+      <DependentUpon>TitleBlockExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\TitleExtends.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\ViewExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\ViewExtends.Designer.cs">
+      <DependentUpon>ViewExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Controle\WaterMarkExtends.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\Controle\WaterMarkExtends.Designer.cs">
+      <DependentUpon>WaterMarkExtends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListForm.Designer.cs">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LookupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LookupForm.Designer.cs">
+      <DependentUpon>LookupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProcessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProcessForm.Designer.cs">
+      <DependentUpon>ProcessForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Objetos\Author.cs" />
+    <Compile Include="Objetos\Controles.cs" />
+    <Compile Include="Objetos\Enums.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\acrescimo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controles\Controle\ActionExtends.resx">
+      <DependentUpon>ActionExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\ButtonImageExtends.resx">
+      <DependentUpon>ButtonImageExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\CalculateExtends.resx">
+      <DependentUpon>CalculateExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\CaptionExtends.resx">
+      <DependentUpon>CaptionExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\CardExtends.resx">
+      <DependentUpon>CardExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\CheckGridExtends.resx">
+      <DependentUpon>CheckGridExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\ComboBoxExtends.resx">
+      <DependentUpon>ComboBoxExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\CommandButtonExtends.resx">
+      <DependentUpon>CommandButtonExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\Base\CommonGridBase.resx">
+      <DependentUpon>CommonGridBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\ButtonMaxExtends.resx">
+      <DependentUpon>ButtonMaxExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\DirectoryExtends.resx">
+      <DependentUpon>DirectoryExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\DisplayItemExtends.resx">
+      <DependentUpon>DisplayItemExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\DivisionBarExtends.resx">
+      <DependentUpon>DivisionBarExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\EntityItemExtends.resx">
+      <DependentUpon>EntityItemExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\FileExtends.resx">
+      <DependentUpon>FileExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\FilterDataExtends.resx">
+      <DependentUpon>FilterDataExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\FilterExtends.resx">
+      <DependentUpon>FilterExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\GridViewExtends.resx">
+      <DependentUpon>GridViewExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\GroupExtends.resx">
+      <DependentUpon>GroupExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\HideExtends.resx">
+      <DependentUpon>HideExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\ImageButtonExtends.resx">
+      <DependentUpon>ImageButtonExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\ImageGridExtends.resx">
+      <DependentUpon>ImageGridExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\InfoGridExtends.resx">
+      <DependentUpon>InfoGridExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\ItemExtends.resx">
+      <DependentUpon>ItemExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\ItemStatusExtends.resx">
+      <DependentUpon>ItemStatusExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\LabelExtends.resx">
+      <DependentUpon>LabelExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\LabelViewExtends.resx">
+      <DependentUpon>LabelViewExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\ListItemExtends.resx">
+      <DependentUpon>ListItemExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\ListSearchExtends.resx">
+      <DependentUpon>ListSearchExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\MaskEditExtends.resx">
+      <DependentUpon>MaskEditExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\MemoExtends.resx">
+      <DependentUpon>MemoExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\MenuItemExtends.resx">
+      <DependentUpon>MenuItemExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\MessageExtends.resx">
+      <DependentUpon>MessageExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\MessageButtonExtends.resx">
+      <DependentUpon>MessageButtonExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\MessageCheckExtends.resx">
+      <DependentUpon>MessageCheckExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\ProcessExtends.resx">
+      <DependentUpon>ProcessExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\ResultExtends.resx">
+      <DependentUpon>ResultExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\SelectGridExtends.resx">
+      <DependentUpon>SelectGridExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\SimpleGridExtends.resx">
+      <DependentUpon>SimpleGridExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\StatusButtonExtends.resx">
+      <DependentUpon>StatusButtonExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\CaptionGridExtends.resx">
+      <DependentUpon>CaptionGridExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\CaptionItemExtends.resx">
+      <DependentUpon>CaptionItemExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\TaskItemExtends.resx">
+      <DependentUpon>TaskItemExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\TitleBlockExtends.resx">
+      <DependentUpon>TitleBlockExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\ViewExtends.resx">
+      <DependentUpon>ViewExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\Controle\WaterMarkExtends.resx">
+      <DependentUpon>WaterMarkExtends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListForm.resx">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LookupForm.resx">
+      <DependentUpon>LookupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProcessForm.resx">
+      <DependentUpon>ProcessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pesquisa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inclusao.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confirmacao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unpublishrule.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\publishrule.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recarregar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lookup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registerform.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unchecked.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_18_4003.gif" />
+    <None Include="Resources\ico_16_5010.gif" />
+    <None Include="Resources\CreateInCrm.gif" />
+    <None Include="Resources\exceloficial.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\confirm.png" />
+    <Content Include="Resources\executar.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

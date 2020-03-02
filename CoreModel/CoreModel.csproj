@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA1F209A-D27C-4B1E-BB13-8EA52AAC8D6A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CoreModel</RootNamespace>
+    <AssemblyName>CoreModel</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CoreSDK">
+      <HintPath>..\..\Lib\CoreSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\Model\Estoque\Almoxarifado.cs" />
+    <Compile Include="Domain\Model\Estoque\AlmoxarifadoMovimento.cs" />
+    <Compile Include="Domain\Model\Estoque\AlmoxarifadoTransferencia.cs" />
+    <Compile Include="Domain\Model\Estoque\AlmoxarifadoUnidade.cs" />
+    <Compile Include="Domain\Model\Estoque\AlmoxarifadoUsuario.cs" />
+    <Compile Include="Domain\Model\Estoque\CategoriaProduto.cs" />
+    <Compile Include="Domain\Model\Estoque\DevolucaoEstoque.cs" />
+    <Compile Include="Domain\Model\Estoque\FollowUPCompra.cs" />
+    <Compile Include="Domain\Model\Estoque\Grupo.cs" />
+    <Compile Include="Domain\Model\Estoque\NotaFiscal.cs" />
+    <Compile Include="Domain\Model\Estoque\NotaFiscalItem.cs" />
+    <Compile Include="Domain\Model\Estoque\OrcamentoSolicitacao.cs" />
+    <Compile Include="Domain\Model\Estoque\Peca.cs" />
+    <Compile Include="Domain\Model\Estoque\Produto.cs" />
+    <Compile Include="Domain\Model\Estoque\ProdutoAlmoxarifado.cs" />
+    <Compile Include="Domain\Model\Estoque\ProdutoTributacao.cs" />
+    <Compile Include="Domain\Model\Estoque\ProdutoUnidade.cs" />
+    <Compile Include="Domain\Model\Estoque\RequisicaoEstoque.cs" />
+    <Compile Include="Domain\Model\Estoque\RequisicaoEstoqueItem.cs" />
+    <Compile Include="Domain\Model\Estoque\RequisicaoProdutividade.cs" />
+    <Compile Include="Domain\Model\Estoque\Servico.cs" />
+    <Compile Include="Domain\Model\Estoque\ServicoProduto.cs" />
+    <Compile Include="Domain\Model\Estoque\SolicitacaoCompra.cs" />
+    <Compile Include="Domain\Model\Estoque\SolicitacaoCompraBaixa.cs" />
+    <Compile Include="Domain\Model\Estoque\SolicitacaoCompraProduto.cs" />
+    <Compile Include="Domain\Model\Estoque\TabelaPreco.cs" />
+    <Compile Include="Domain\Model\Financeiro\BaixaContasPagar.cs" />
+    <Compile Include="Domain\Model\Financeiro\BaixaContasReceber.cs" />
+    <Compile Include="Domain\Model\Financeiro\ContaFinanceira.cs" />
+    <Compile Include="Domain\Model\Financeiro\ContasPagar.cs" />
+    <Compile Include="Domain\Model\Financeiro\ContasReceber.cs" />
+    <Compile Include="Domain\Model\Financeiro\DocumentoFinanceiro.cs" />
+    <Compile Include="Domain\Model\Financeiro\DocumentoRelacionado.cs" />
+    <Compile Include="Domain\Model\Financeiro\DocumentoRevertido.cs" />
+    <Compile Include="Domain\Model\Financeiro\DocumentoSubstituido.cs" />
+    <Compile Include="Domain\Model\Financeiro\DocumentoVinculado.cs" />
+    <Compile Include="Domain\Model\Financeiro\Fatura.cs" />
+    <Compile Include="Domain\Model\Financeiro\FaturaServico.cs" />
+    <Compile Include="Domain\Model\Financeiro\InstrucaoDocumento.cs" />
+    <Compile Include="Domain\Model\Financeiro\InstrucaoHistorico.cs" />
+    <Compile Include="Domain\Model\Financeiro\ModalidadeContaFinanceira.cs" />
+    <Compile Include="Domain\Model\Financeiro\MovimentoFinanceiro.cs" />
+    <Compile Include="Domain\Model\Financeiro\OperacaoFinanceira.cs" />
+    <Compile Include="Domain\Model\Financeiro\Recebiveis.cs" />
+    <Compile Include="Domain\Model\Financeiro\RecebiveisRecalculo.cs" />
+    <Compile Include="Domain\Model\Global\AgenciaBancaria.cs" />
+    <Compile Include="Domain\Model\Global\Agente.cs" />
+    <Compile Include="Domain\Model\Global\Aplicacao.cs" />
+    <Compile Include="Domain\Model\Global\AvaliacaoOperacional.cs" />
+    <Compile Include="Domain\Model\Global\Categoria.cs" />
+    <Compile Include="Domain\Model\Global\CentroCusto.cs" />
+    <Compile Include="Domain\Model\Global\Cliente.cs" />
+    <Compile Include="Domain\Model\Global\CondicaoPagamento.cs" />
+    <Compile Include="Domain\Model\Global\Conexao.cs" />
+    <Compile Include="Domain\Model\Global\ConfiguracaoFiscal.cs" />
+    <Compile Include="Domain\Model\Global\Conta.cs" />
+    <Compile Include="Domain\Model\Global\Contato.cs" />
+    <Compile Include="Domain\Model\Global\Departamento.cs" />
+    <Compile Include="Domain\Model\Global\Designacao.cs" />
+    <Compile Include="Domain\Model\Global\Endereco.cs" />
+    <Compile Include="Domain\Model\Global\Estado.cs" />
+    <Compile Include="Domain\Model\Global\Favorecido.cs" />
+    <Compile Include="Domain\Model\Global\Feriado.cs" />
+    <Compile Include="Domain\Model\Global\Fornecedor.cs" />
+    <Compile Include="Domain\Model\Global\ModalidadePagamento.cs" />
+    <Compile Include="Domain\Model\Global\Municipio.cs" />
+    <Compile Include="Domain\Model\Global\OrigemOperacao.cs" />
+    <Compile Include="Domain\Model\Global\Padrao.cs" />
+    <Compile Include="Domain\Model\Global\Projeto.cs" />
+    <Compile Include="Domain\Model\Global\Telefone.cs" />
+    <Compile Include="Domain\Model\Global\TipoConexao.cs" />
+    <Compile Include="Domain\Model\Global\TipoTitulo.cs" />
+    <Compile Include="Domain\Model\Global\Transportadora.cs" />
+    <Compile Include="Domain\Model\Global\Unidade.cs" />
+    <Compile Include="Domain\Model\Tributario\CodigoReceita.cs" />
+    <Compile Include="Domain\Model\Tributario\CodigoServico.cs" />
+    <Compile Include="Domain\Model\Tributario\ConfiguracaoTributaria.cs" />
+    <Compile Include="Domain\Model\Tributario\NCM.cs" />
+    <Compile Include="Domain\Model\Tributario\RegraTributacao.cs" />
+    <Compile Include="Domain\Model\Tributario\SituacaoTributaria.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Domain\Model\Compras\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

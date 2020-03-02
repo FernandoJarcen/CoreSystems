@@ -1,0 +1,11 @@
+C:\Desenv\Core\CoreStudio\CoreStudio\CoreStudio\bin\Debug\CoreStudio.dll
+C:\Desenv\Core\CoreStudio\CoreStudio\CoreStudio\bin\Debug\CoreStudio.pdb
+C:\Desenv\Core\CoreStudio\CoreStudio\CoreStudio\bin\Debug\CoreSDK.dll
+C:\Desenv\Core\CoreStudio\CoreStudio\CoreStudio\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+C:\Desenv\Core\CoreStudio\CoreStudio\CoreStudio\bin\Debug\MySql.Data.dll
+C:\Desenv\Core\CoreStudio\CoreStudio\CoreStudio\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Desenv\Core\CoreStudio\CoreStudio\CoreStudio\obj\Debug\Objects.csprojResolveAssemblyReference.cache
+C:\Desenv\Core\CoreStudio\CoreStudio\CoreStudio\obj\Debug\CoreStudio.Properties.Resources.resources
+C:\Desenv\Core\CoreStudio\CoreStudio\CoreStudio\obj\Debug\Objects.csproj.GenerateResource.Cache
+C:\Desenv\Core\CoreStudio\CoreStudio\CoreStudio\obj\Debug\CoreStudio.dll
+C:\Desenv\Core\CoreStudio\CoreStudio\CoreStudio\obj\Debug\CoreStudio.pdb

@@ -1,0 +1,5 @@
+C:\Desenv\Core\sistematica.application\Application.Model\bin\Debug\Application.Model.dll
+C:\Desenv\Core\sistematica.application\Application.Model\bin\Debug\Application.Model.pdb
+C:\Desenv\Core\sistematica.application\Application.Model\obj\Debug\Application.Model.csprojResolveAssemblyReference.cache
+C:\Desenv\Core\sistematica.application\Application.Model\obj\Debug\Application.Model.dll
+C:\Desenv\Core\sistematica.application\Application.Model\obj\Debug\Application.Model.pdb

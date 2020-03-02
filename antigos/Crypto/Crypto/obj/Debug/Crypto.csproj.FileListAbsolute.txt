@@ -1,0 +1,13 @@
+C:\Desenv\Core\Crypto\Crypto\bin\Debug\Crypto.exe.config
+C:\Desenv\Core\Crypto\Crypto\bin\Debug\Crypto.exe
+C:\Desenv\Core\Crypto\Crypto\bin\Debug\Crypto.pdb
+C:\Desenv\Core\Crypto\Crypto\bin\Debug\CoreFramework.dll
+C:\Desenv\Core\Crypto\Crypto\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+C:\Desenv\Core\Crypto\Crypto\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Desenv\Core\Crypto\Crypto\obj\Debug\Crypto.csprojResolveAssemblyReference.cache
+C:\Desenv\Core\Crypto\Crypto\obj\Debug\Crypto.Form1.resources
+C:\Desenv\Core\Crypto\Crypto\obj\Debug\Crypto.Properties.Resources.resources
+C:\Desenv\Core\Crypto\Crypto\obj\Debug\Crypto.csproj.GenerateResource.Cache
+C:\Desenv\Core\Crypto\Crypto\obj\Debug\Crypto.exe
+C:\Desenv\Core\Crypto\Crypto\obj\Debug\Crypto.pdb
+C:\Desenv\Core\Crypto\Crypto\bin\Debug\MySql.Data.dll

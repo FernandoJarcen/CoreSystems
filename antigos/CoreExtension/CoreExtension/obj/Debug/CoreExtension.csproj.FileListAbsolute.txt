@@ -1,0 +1,14 @@
+C:\Desenv\Core\CoreExtension\CoreExtension\bin\Debug\CoreExtension.dll
+C:\Desenv\Core\CoreExtension\CoreExtension\bin\Debug\CoreExtension.pdb
+C:\Desenv\Core\CoreExtension\CoreExtension\obj\Debug\CoreExtension.csprojResolveAssemblyReference.cache
+C:\Desenv\Core\CoreExtension\CoreExtension\obj\Debug\CoreExtension.Properties.Resources.resources
+C:\Desenv\Core\CoreExtension\CoreExtension\obj\Debug\CoreExtension.csproj.GenerateResource.Cache
+C:\Desenv\Core\CoreExtension\CoreExtension\obj\Debug\CoreExtension.dll
+C:\Desenv\Core\CoreExtension\CoreExtension\obj\Debug\CoreExtension.pdb
+C:\Desenv\Core\antigos\CoreExtension\CoreExtension\bin\Debug\CoreExtension.dll
+C:\Desenv\Core\antigos\CoreExtension\CoreExtension\bin\Debug\CoreExtension.pdb
+C:\Desenv\Core\antigos\CoreExtension\CoreExtension\obj\Debug\CoreExtension.Controles.Controle.FieldExtends.resources
+C:\Desenv\Core\antigos\CoreExtension\CoreExtension\obj\Debug\CoreExtension.Properties.Resources.resources
+C:\Desenv\Core\antigos\CoreExtension\CoreExtension\obj\Debug\CoreExtension.csproj.GenerateResource.Cache
+C:\Desenv\Core\antigos\CoreExtension\CoreExtension\obj\Debug\CoreExtension.dll
+C:\Desenv\Core\antigos\CoreExtension\CoreExtension\obj\Debug\CoreExtension.pdb

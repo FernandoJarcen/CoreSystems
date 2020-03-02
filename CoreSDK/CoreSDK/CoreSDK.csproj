@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD9A6474-57AE-4675-ADD6-648CA77220AF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CoreSDK</RootNamespace>
+    <AssemblyName>CoreSDK</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=12.8.0.6, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=5.7.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Lib\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Base\Acao.cs" />
+    <Compile Include="Entities\Base\IAcaoBase.cs" />
+    <Compile Include="Entities\Services\IServiceBase.cs" />
+    <Compile Include="Enums\Controles.cs" />
+    <Compile Include="Enums\Entidade.cs" />
+    <Compile Include="Enums\Global.cs" />
+    <Compile Include="Enums\Operadores.cs" />
+    <Compile Include="Enums\PlugginStatus.cs" />
+    <Compile Include="Enums\Prm.cs" />
+    <Compile Include="Objetos\Author.cs" />
+    <Compile Include="Objetos\Constantes.cs" />
+    <Compile Include="Objetos\Objeto.cs" />
+    <Compile Include="Enums\CustomActions.cs" />
+    <Compile Include="Enums\BancoDados.cs" />
+    <Compile Include="Objetos\CustomDispose.cs" />
+    <Compile Include="ODB\Domain\DataSet\FieldCustom.cs" />
+    <Compile Include="ODB\DataBase\DB.cs" />
+    <Compile Include="ODB\DataBase\Firebird.cs" />
+    <Compile Include="ODB\DataBase\MySql.cs" />
+    <Compile Include="ODB\DataBase\OracleBase.cs" />
+    <Compile Include="ODB\DataBase\SqlServer.cs" />
+    <Compile Include="ODB\Domain\DBUtilities.cs" />
+    <Compile Include="ODB\Domain\Factory.cs" />
+    <Compile Include="ODB\Domain\FactoryBase.cs" />
+    <Compile Include="ODB\Domain\Mapa.cs" />
+    <Compile Include="ODB\Domain\Parametros.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ActiveInformationService.cs" />
+    <Compile Include="Services\CryptoService.cs" />
+    <Compile Include="Services\EmailService.cs" />
+    <Compile Include="Services\FileService.cs" />
+    <Compile Include="Services\ProcessService.cs" />
+    <Compile Include="Services\RegistryService.cs" />
+    <Compile Include="Services\CoreService.cs" />
+    <Compile Include="Services\ValidationService.cs" />
+    <Compile Include="Specific\AssinaturaEletronica.cs" />
+    <Compile Include="Specific\Datador.cs" />
+    <Compile Include="Utils\Extends.cs" />
+    <Compile Include="Utils\Forms.cs" />
+    <Compile Include="Specific\Exportador.cs" />
+    <Compile Include="Utils\LOG.cs" />
+    <Compile Include="Specific\Modulo.cs" />
+    <Compile Include="Utils\Msg.cs" />
+    <Compile Include="Specific\Pluggin.cs" />
+    <Compile Include="Enums\Arquivos.cs" />
+    <Compile Include="Utils\Util.cs" />
+    <Compile Include="Utils\Xml.cs" />
+    <Compile Include="Utils\XmlEditor.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
